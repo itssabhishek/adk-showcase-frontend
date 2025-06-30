@@ -1,0 +1,212 @@
+@import url('https://fonts.googleapis.com/css2?family=Geist:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Geist+Mono:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+    /* Theme colors */
+    --color-primary: #3BE2BE;
+    --color-foreground: 0, 0, 0;
+    --color-background-start: 214, 219, 220;
+    --color-background-end: 255, 255, 255;
+    
+    /* Privy theme */
+    --privy-color-background: #222224;
+    --privy-color-background-2: rgba(255, 255, 255, 0.2);
+    --privy-color-accent-light: #3be2be;
+    --privy-color-accent: #3be2be;
+
+    --privy-color-foreground: #ffffff;
+    --privy-color-foreground-1: #ffffff;
+    --privy-color-foreground-2: #ffffff;
+    --privy-color-foreground-4: #3BE2BE;
+    --privy-color-accent: #3be2be;
+    --privy-color-accent-dark: rgba(59, 226, 190, 0.8);
+    --privy-border-radius-lg: 8px;
+    --privy-border-radius-mdlg: 8px;
+    
+}
+
+html, body {
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+body {
+    color: rgb(var(--color-foreground));
+}
+
+/* Global scrollbar styles */
+* {
+    scrollbar-width: none;  /* Firefox */
+    -ms-overflow-style: none;  /* IE and Edge */
+}
+
+*::-webkit-scrollbar {
+    display: none;  /* Chrome, Safari and Opera */
+}
+
+/* Custom scrollbar where needed */
+.custom-scroll {
+    scrollbar-width: thin !important;
+    -ms-overflow-style: auto !important;
+    scrollbar-color: #FFFFFF0D #FFFFFF0D !important;
+}
+
+.custom-scroll::-webkit-scrollbar {
+    width: 4px;
+    height: 4px;
+    display: block;
+}
+
+.custom-scroll::-webkit-scrollbar-track {
+    background: #FFFFFF0D;
+    border-radius: 40px;
+}
+
+.custom-scroll::-webkit-scrollbar-thumb {
+    background: #FFFFFF0D;
+    border-radius: 40px;
+    cursor: pointer;
+}
+
+.custom-scroll::-webkit-scrollbar-thumb:hover {
+    background: #FFFFFF0D;
+}
+
+@layer base {
+    * {
+        scroll-behavior: smooth;
+    }
+
+    h1 {
+        @apply font-geist scroll-m-20 text-xl font-semibold tracking-tight;
+    }
+
+    h2 {
+        @apply font-geist scroll-m-20 text-base font-semibold tracking-tight;
+    }
+
+    h3 {
+        @apply font-geist scroll-m-20 text-sm font-semibold tracking-tight;
+    }
+
+    h4 {
+        @apply font-geist scroll-m-20 text-xs font-semibold tracking-tight;
+    }
+
+    p {
+        @apply font-geist scroll-m-20  font-normal tracking-tight;
+    }
+
+    blockquote {
+        @apply border-l-2 pl-6 italic;
+    }
+
+    tr {
+        @apply even:bg-muted m-0 border-t p-0;
+    }
+
+    th {
+        @apply border px-4 py-2 text-left font-bold [&[align=center]]:text-center [&[align=right]]:text-right;
+    }
+
+    td {
+        @apply border px-4 py-2 text-left [&[align=center]]:text-center [&[align=right]]:text-right;
+    }
+
+    code {
+        @apply bg-muted relative rounded px-[0.3rem] py-[0.2rem] font-mono text-sm font-semibold;
+    }
+
+    small {
+        @apply text-xs leading-none font-light;
+    }
+}
+
+@keyframes fade-in {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+canvas {
+    opacity: 1;
+    touch-action: none;
+}
+
+@media (max-height: 680px) {
+    .small-devices-auto_height {
+        height: calc(100dvh - 100px);
+    }
+}
+
+.swiper-wrapper {
+    padding-bottom: 16px;
+    max-width: 100%;
+}
+
+/* Typography */
+.h3 {
+    font-family: 'Geist', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.canvas-container:fullscreen {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.canvas-container:fullscreen canvas {
+    width: 100vw !important;
+    height: 100vh !important;
+}
+
+p.body-1 {
+    font-size: 16px;
+}
+
+p.body-2 {
+    font-size: 14px;
+}
+
+p.body-3 {
+    font-size: 12px;
+}
+
+.button-text-md {
+    font-family: 'Geist', sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.button-text-sm {
+    font-family: 'Geist', sans-serif;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.blur {
+    filter: blur(120px);
+}
+
+/* Sound wave animation for mic modal */
+@keyframes soundWave {
+    0% { height: 4px; }
+    50% { height: 24px; }
+    100% { height: 4px; }
+}
+
+.animate-sound-wave {
+    animation: soundWave 1s ease-in-out infinite;
+}

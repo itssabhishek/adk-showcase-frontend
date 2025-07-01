@@ -25,9 +25,14 @@ const MainCanvas = dynamic(
 );
 export default function AgentChat() {
   const { agent } = useAgentStore();
-  const messages = [];
-  const { connect, joinStream, sendMessage, leaveStream, disconnect } =
-    useSocketChatStore();
+  const {
+    messages,
+    connect,
+    joinStream,
+    sendMessage,
+    leaveStream,
+    disconnect,
+  } = useSocketChatStore();
   const [streamId, setStreamId] = useState<number | null>(null);
   const [chatInputValue, setChatInputValue] = useState('');
   const [isProcessing, setIsProcessing] = useState(false);

@@ -67,7 +67,7 @@ export default function TextareaWithButton({
       <textarea
         ref={textareaRef}
         className={cn(
-          'w-full p-1 bg-transparent text-white  text-sm font-geist placeholder:font-geist placeholder:text-sm placeholder:text-muted rounded resize-none leading-snug focus:outline-none',
+          'w-full p-1 bg-transparent text-white  text-sm font-helvetica placeholder:font-helvetica placeholder:text-sm placeholder:text-muted rounded resize-none leading-snug focus:outline-none',
           className
         )}
         placeholder={placeholder}

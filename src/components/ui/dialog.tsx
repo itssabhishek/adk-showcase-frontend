@@ -4,8 +4,6 @@ import * as DialogPrimitive from '@radix-ui/react-dialog';
 import { cva, type VariantProps } from 'class-variance-authority';
 import { X } from 'lucide-react';
 import * as React from 'react';
-
-import { IconTextButton } from '@/components/buttons/icon-text-button';
 import { cn } from '@/lib/utils';
 
 import { CloseButton } from '../dialog/dialog.provider';
@@ -218,7 +216,7 @@ const DialogTitle = React.forwardRef<
   <DialogPrimitive.Title
     ref={ref}
     className={cn(
-      'font-geist scroll-m-20 text-base font-semibold tracking-tight',
+      'font-helvetica scroll-m-20 text-base font-semibold tracking-tight',
       className
     )}
     {...props}
@@ -235,7 +233,7 @@ const DialogDescription = React.forwardRef<
   <DialogPrimitive.Description
     ref={ref}
     className={cn(
-      'font-geist scroll-m-20  font-normal tracking-tight text-muted text-xs',
+      'font-helvetica scroll-m-20  font-normal tracking-tight text-muted text-xs',
       className
     )}
     {...props}

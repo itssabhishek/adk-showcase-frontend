@@ -1,6 +1,7 @@
 'use client';
 
 import './globals.css';
+import { helveticaNeue } from './fonts';
 
 import { GoogleAnalytics } from '@next/third-parties/google';
 import React, { Suspense } from 'react';
@@ -13,8 +14,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" suppressHydrationWarning>
-      <body className="w-full h-full font-geist">
+    <html
+      lang="en"
+      suppressHydrationWarning
+      className={`${helveticaNeue.variable}`}>
+      <body className="w-full h-full font-helvetica">
         <ContextWrapper>
           <Suspense fallback={<div className="p-4">Loading...</div>}>
             <RootInner>{children}</RootInner>

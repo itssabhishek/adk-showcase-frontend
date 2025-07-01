@@ -292,7 +292,7 @@ export default function AgentChat() {
         <div className="relative w-full">
           <h1
             className={
-              'absolute top-3.5 z-50 left-1/2 -translate-x-1/2 text-white text-center'
+              'absolute top-3.5 z-50 left-1/2 -translate-x-1/2 text-white text-center font-medium text-[18px]'
             }>
             Brand name
           </h1>
@@ -318,8 +318,8 @@ export default function AgentChat() {
 
             {messages.length === 0 && (
               <>
-                <h2 className="text-white text-[26px] max-w-1/2 text-center">
-                  What gigs are coming up?
+                <h2 className="text-white text-[26px] max-w-[200px] text-center font-semibold">
+                  What’s on your mind?
                 </h2>
 
                 <div className="flex justify-center gap-2 mx-auto mt-2 flex-wrap max-w-1/2">
@@ -328,7 +328,7 @@ export default function AgentChat() {
                     onClick={() => {
                       sendMessage('What gigs are coming up?');
                     }}
-                    className="h-[50px] px-4 border border-white text-white rounded-full button-text-md hover:text-white hover:bg-white/10 transition-colors duration-200">
+                    className="h-[50px] px-4 border border-white/20 text-white rounded-full button-text-md hover:text-white hover:bg-white/10 transition-colors duration-200">
                     What gigs are coming up?
                   </Button>
                   <Button
@@ -336,7 +336,7 @@ export default function AgentChat() {
                     onClick={() => {
                       sendMessage('Tell me about Fred Again');
                     }}
-                    className="h-[50px] px-4 border border-white text-white rounded-full button-text-md hover:text-white hover:bg-white/10 transition-colors duration-200">
+                    className="h-[50px] px-4 border border-white/20 text-white rounded-full button-text-md hover:text-white hover:bg-white/10 transition-colors duration-200">
                     Fred Again
                   </Button>
                   <Button
@@ -344,7 +344,7 @@ export default function AgentChat() {
                     onClick={() => {
                       sendMessage('Who is Jyoty?');
                     }}
-                    className="h-[50px] px-4 border border-white text-white rounded-full button-text-md hover:text-white hover:bg-white/10 transition-colors duration-200">
+                    className="h-[50px] px-4 border border-white/20 text-white rounded-full button-text-md hover:text-white hover:bg-white/10 transition-colors duration-200">
                     Jyoty
                   </Button>
                 </div>

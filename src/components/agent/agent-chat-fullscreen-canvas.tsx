@@ -77,7 +77,7 @@ export default function AgentChatFullScreenCanvas({
         <TextareaWithButton
           placeholder="Type your message"
           className={
-            'text-sm font-geist placeholder:text-sm placeholder:font-geist px-0 py-2.5 pr-14 text-white placeholder:text-white/40 border-none'
+            'text-sm font-helvetica placeholder:text-sm placeholder:font-helvetica px-0 py-2.5 pr-14 text-white placeholder:text-white/40 border-none'
           }
           containerClassName={
             'flex bg-black pl-6 items-center flex-row flex-nowrap rounded-md border border-lightWhite gap-x-2 transition-colors duration-200 focus-within:border-primary/40'

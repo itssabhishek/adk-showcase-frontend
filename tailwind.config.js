@@ -9,8 +9,7 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        geist: ['Geist', 'serif'],
-        geistMono: ['Geist Mono', 'serif'],
+        helvetica: ['var(--font-helvetica-neue)'],
       },
       colors: {
         primary: '#3BE2BE',

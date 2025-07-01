@@ -55,7 +55,7 @@ export function ChatPublicMessageUI({
           className="rounded h-[18px] w-[18px] flex-shrink-0 mt-1"
         />
 
-        <div className="flex flex-wrap text-sm font-geist">
+        <div className="flex flex-wrap text-sm font-helvetica">
           <span className={cn('mr-2')}>
             <span
               className={cn(
@@ -91,17 +91,19 @@ export function ChatPublicMessageUI({
             align="end"
             className="bg-black border-primary text-white w-48 py-3.5 px-3">
             <DropdownMenuItem className="flex items-center gap-x-3.5 py-2 focus:bg-lightWhite border-b border-lightWhite">
-              <span className="text-sm font-geist font-medium">
+              <span className="text-sm font-helvetica font-medium">
                 PIN message
               </span>
             </DropdownMenuItem>
             <DropdownMenuItem className="flex items-center gap-x-3.5 py-2 focus:bg-lightWhite border-b border-lightWhite">
-              <span className="text-sm font-geist font-medium">
+              <span className="text-sm font-helvetica font-medium">
                 Delete message
               </span>
             </DropdownMenuItem>
             <DropdownMenuItem className="flex items-center gap-x-3.5 py-2 focus:bg-lightWhite border-b border-lightWhite">
-              <span className="text-sm font-geist font-medium">Ban user</span>
+              <span className="text-sm font-helvetica font-medium">
+                Ban user
+              </span>
             </DropdownMenuItem>
           </DropdownMenuContent>
         </DropdownMenu>
